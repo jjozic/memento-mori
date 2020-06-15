@@ -10,12 +10,17 @@
     <header>
         <h2>Memento Mori</h2>
     </header>
-
-    <p id="greeting">Enter your current age to represent your life. This graph will give you a lifespan of 80 years.</p>
-    <input type="number" name="age" id="age" min="1" max="80">
-    <button id="enter">Enter</button>
-
-    <table id="life-board"></table>
+    <div class="flex-container">
+        <div class="content">
+            <p>Each row represents one year of your life. And each block represents one week in the year.</p>
+            <p>When will you start making your weeks count and stop letting them pass you by without moving in the right direction?</p>
+            <br>
+            <p class="greeting">Enter your current age to represent your life. This graph will give you a lifespan of 80 years.</p>
+            <input type="number" name="age" id="age" min="1" max="80">
+            <button id="enter">Enter</button>
+        </div>
+        <table id="life-board"></table>
+    </div>
 
     <script async src="./script.js"></script>
 </body>

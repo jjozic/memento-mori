@@ -1,9 +1,26 @@
+header{
+    text-align: center;
+    color: white;
+    background-color: gray;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+p{
+    margin-right: 30px;
+}
+
 table, td{
     border: 1pt black solid;
 }
 
 td{
-    padding: 4px;
+    padding: 3px;
 }
 
 .lived{
