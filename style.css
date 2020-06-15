@@ -1,0 +1,11 @@
+table, td{
+    border: 1pt black solid;
+}
+
+td{
+    padding: 4px;
+}
+
+.lived{
+    background-color: red;
+}
