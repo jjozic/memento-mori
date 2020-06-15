@@ -6,9 +6,18 @@ header{
 
 .flex-container{
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 20px;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img, input, button, p{
+    align-self: center;
 }
 
 p{

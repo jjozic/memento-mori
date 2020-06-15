@@ -15,15 +15,18 @@ function drawLifeBoard(){
 }
 
 function drawLivedYears(){
-    let rows = document.getElementsByTagName('tr')
+    let columns = document.getElementsByTagName('td')
     //clear
-    for(i = 0; i < rows.length; i++){
-        rows[i].classList.remove('lived')
+    for(i = 0; i < columns.length; i++){
+        columns[i].classList.remove('lived')
     }
     let age = ageInput.value
+    let weeks = age*52
 
-    for(i = 0; i < age; i++){
-        rows[i].classList.add('lived')
+    for(var i = 0; i < weeks; i++){
+        (function(i){
+            setTimeout(() => columns[i].classList.add('lived'), i*5);
+        })(i);
     }
 }
 
