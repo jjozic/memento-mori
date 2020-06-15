@@ -15,21 +15,15 @@ function drawLifeBoard(){
 }
 
 function drawLivedYears(){
+    let rows = document.getElementsByTagName('tr')
+    //clear
+    for(i = 0; i < rows.length; i++){
+        rows[i].classList.remove('lived')
+    }
     let age = ageInput.value
 
-    for(i = 0; i < 80; i++){
-        let row = document.createElement('tr')
-        for(j = 0; j < 52; j++){
-            let col = document.createElement('td')
-            if(age>i){
-                col.classList.add('lived')
-            }
-            row.appendChild(col)
-        }
-        lifeBoard.appendChild(row)
-    }
     for(i = 0; i < age; i++){
-
+        rows[i].classList.add('lived')
     }
 }
 
