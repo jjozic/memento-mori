@@ -21,9 +21,7 @@ function drawLivedYears(){
         columns[i].classList.remove('lived')
     }
     let mydate = new Date(ageInput.value);
-
-    let age = calculateAge(mydate)
-    let weeks = age['years'] * 52 + age['months'] * 4 + age['days'] / 7
+    let weeks = calculateAgeInWeeks(mydate)
 
     for(var i = 0; i < weeks; i++){
         (function(i){
@@ -32,16 +30,10 @@ function drawLivedYears(){
     }
 }
 
-function calculateAge(birthday) { 
+function calculateAgeInWeeks(birthday) { 
     var timeDiff = Date.now() - birthday.getTime();
-    var newDate = new Date(timeDiff);
-    // - 1970 because of UNIX Time
-    let years = Math.abs(newDate.getUTCFullYear() - 1970)
-    // + 1 becaue getDay goes from 0-11
-    var months = newDate.getMonth() + 1 
-    var days = newDate.getDay() + 1  
-
-    return {years, months, days}
+    
+    return timeDiff / (24*3600*1000*7)
 }
 
 enterBtn.addEventListener('click', drawLivedYears)
