@@ -8,4 +8,4 @@ This project is a simple visualization to show you how short your life really is
 
 - Enter your birthday
 - From your birthday the the fields get calculated which show you how much of your life has already passed.
-- This project is hosted on: 
+- This project is hosted on: https://jjozic.github.io/memento-mori/
