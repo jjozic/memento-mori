@@ -32,6 +32,15 @@ td{
     padding: 3px;
 }
 
+button{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    box-shadow: 10px 10px 35px -10px rgba(0,0,0,0.75);
+}
+
 .lived{
-    background-color: red;
+    background-color: rgb(192, 85, 85);
 }
